@@ -15,7 +15,7 @@ namespace Veterinario
         public Form1()
         {
             InitializeComponent();
-            Console.WriteLine("PORG con torpedos sexuales");
+            Console.WriteLine("PORG con torpedos sexualfdses");
         }
     }
 }
