@@ -15,6 +15,7 @@ namespace Veterinario
         public contenedor()
         {
             InitializeComponent();
+            Console.WriteLine("soy el dios del nuevo mundo, kira");
         }
     }
 }
