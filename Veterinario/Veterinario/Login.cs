@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Veterinario
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
-        public Form1()
+        public Login()
         {
             InitializeComponent();
             Console.WriteLine("PORG con torpedos sexualfdses");
