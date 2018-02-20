@@ -32,8 +32,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.10.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.10.6\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,11 +56,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="contenedor.cs">
+    <Compile Include="Conexion.cs" />
+    <Compile Include="Contenedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="contenedor.Designer.cs">
-      <DependentUpon>contenedor.cs</DependentUpon>
+    <Compile Include="Contenedor.Designer.cs">
+      <DependentUpon>Contenedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoMascotas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoMascotas.Designer.cs">
+      <DependentUpon>InfoMascotas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoVisita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoVisita.Designer.cs">
+      <DependentUpon>InfoVisita.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -57,10 +81,42 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mascota.cs" />
+    <Compile Include="NuevaMascota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevaMascota.Designer.cs">
+      <DependentUpon>NuevaMascota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NuevaVisita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevaVisita.Designer.cs">
+      <DependentUpon>NuevaVisita.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="contenedor.resx">
-      <DependentUpon>contenedor.cs</DependentUpon>
+    <Compile Include="ListaVisitas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaVisitas.Designer.cs">
+      <DependentUpon>ListaVisitas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visita.cs" />
+    <EmbeddedResource Include="Contenedor.resx">
+      <DependentUpon>Contenedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoMascotas.resx">
+      <DependentUpon>InfoMascotas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoVisita.resx">
+      <DependentUpon>InfoVisita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevaMascota.resx">
+      <DependentUpon>NuevaMascota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevaVisita.resx">
+      <DependentUpon>NuevaVisita.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -70,7 +126,12 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ListaVisitas.resx">
+      <DependentUpon>ListaVisitas.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -83,6 +144,28 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="docs\MySqlCommand.xml" />
+    <Content Include="docs\MySqlCommandBuilder.xml" />
+    <Content Include="docs\MySqlConnection.xml" />
+    <Content Include="docs\MySqlConnectionStringBuilder.xml" />
+    <Content Include="docs\MySqlDataAdapter.xml" />
+    <Content Include="docs\MySqlDataReader.xml" />
+    <Content Include="docs\MySqlException.xml" />
+    <Content Include="docs\MySqlHelper.xml" />
+    <Content Include="docs\MySqlParameter.xml" />
+    <Content Include="docs\MySqlParameterCollection.xml" />
+    <Content Include="docs\MySqlTransaction.xml" />
+    <Content Include="fotos\change_password.png" />
+    <Content Include="fotos\closeSession.png" />
+    <Content Include="fotos\delete.png" />
+    <Content Include="fotos\edit.png" />
+    <Content Include="fotos\notImage.png" />
+    <Content Include="fotos\refresh.png" />
+    <Content Include="fotos\sadporg.jpg" />
+    <Content Include="fotos\save.png" />
+    <Content Include="fotos\Save_grey_16x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
