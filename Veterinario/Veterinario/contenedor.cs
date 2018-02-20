@@ -78,10 +78,7 @@ namespace Veterinario
                     }
                     
                 }
-            }
-
-
-           
+            } 
         }
 
         private void form_FormClosed(object sender, FormClosedEventArgs e)
